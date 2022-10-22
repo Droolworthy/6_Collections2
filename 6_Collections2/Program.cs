@@ -13,24 +13,24 @@ namespace _6_Collections2
             int middlePurchaseAmount = 500;
             int penultimatePurchaseAmount = 500;
             int lastPurchaseAmount = 1000;
-            Queue<int> cashAccount = new Queue<int>();
-            cashAccount.Enqueue(purchaseAmount);
-            cashAccount.Enqueue(nextPurchaseAmount);
-            cashAccount.Enqueue(middlePurchaseAmount);
-            cashAccount.Enqueue(penultimatePurchaseAmount);
-            cashAccount.Enqueue(lastPurchaseAmount);
+            Queue<int> listPrices = new Queue<int>();
+            listPrices.Enqueue(purchaseAmount);
+            listPrices.Enqueue(nextPurchaseAmount);
+            listPrices.Enqueue(middlePurchaseAmount);
+            listPrices.Enqueue(penultimatePurchaseAmount);
+            listPrices.Enqueue(lastPurchaseAmount);
 
-            while (cashAccount.Count > 0)
+            while (listPrices.Count > 0)
             {
                 Console.Clear();
                 Console.WriteLine("Суммы покупок: ");
 
-                foreach (var customer in cashAccount)
+                foreach (var customer in listPrices)
                 {
                     Console.WriteLine(customer);
                 }
 
-                myMoneyAccount += cashAccount.Dequeue();
+                myMoneyAccount += listPrices.Dequeue();
 
                 Console.WriteLine($"У вас на счёте - " + myMoneyAccount + " рублей.");
                 Console.WriteLine("Для продолжения нажмите любую кнопку.");
