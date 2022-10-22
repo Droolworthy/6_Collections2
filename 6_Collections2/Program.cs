@@ -7,7 +7,7 @@ namespace _6_Collections2
     {
         static void Main(string[] args)
         {
-            int moneyAccount = 0;
+            int myMoneyAccount = 0;
             string name = "Николай";
             string nextName = "Владимир";
             string middleName = "Сергей";
@@ -44,9 +44,9 @@ namespace _6_Collections2
                 Console.WriteLine("\nК вам подошёл - " + listBuyers.Dequeue());
                 Console.WriteLine("Он купил товаров на сумму " + cashAccount.Peek() + " рублей.");
 
-                moneyAccount += cashAccount.Dequeue();
+                myMoneyAccount += cashAccount.Dequeue();
 
-                Console.WriteLine($"У вас на счёте - " + moneyAccount + " рублей.");
+                Console.WriteLine($"У вас на счёте - " + myMoneyAccount + " рублей.");
                 Console.WriteLine("Для продолжения нажмите любую кнопку.");
                 Console.ReadKey();
             }
