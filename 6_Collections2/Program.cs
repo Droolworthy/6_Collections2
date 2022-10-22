@@ -18,13 +18,13 @@ namespace _6_Collections2
             int middlePurchaseAmount = 500;
             int penultimatePurchaseAmount = 500;
             int lastPurchaseAmount = 1000;
-            Queue<string> customers = new Queue<string>();
+            Queue<string> listBuyers = new Queue<string>();
             Queue<int> cashAccount = new Queue<int>();
-            customers.Enqueue(name);
-            customers.Enqueue(nextName);
-            customers.Enqueue(middleName);
-            customers.Enqueue(penultimateName);
-            customers.Enqueue(lastName);
+            listBuyers.Enqueue(name);
+            listBuyers.Enqueue(nextName);
+            listBuyers.Enqueue(middleName);
+            listBuyers.Enqueue(penultimateName);
+            listBuyers.Enqueue(lastName);
             cashAccount.Enqueue(purchaseAmount);
             cashAccount.Enqueue(nextPurchaseAmount);
             cashAccount.Enqueue(middlePurchaseAmount);
@@ -36,12 +36,12 @@ namespace _6_Collections2
                 Console.Clear();
                 Console.WriteLine("\nСейчас в очереди стоят: ");
 
-                foreach (var customer in customers)
+                foreach (var customer in listBuyers)
                 {
                     Console.WriteLine(customer);
                 }
 
-                Console.WriteLine("\nК вам подошёл - " + customers.Dequeue());
+                Console.WriteLine("\nК вам подошёл - " + listBuyers.Dequeue());
                 Console.WriteLine("Он купил товаров на сумму " + cashAccount.Peek() + " рублей.");
 
                 moneyAccount += cashAccount.Dequeue();
